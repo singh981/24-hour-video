@@ -1,0 +1,11 @@
+{
+    "name": "24-hour-video",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "install": "cd lambdas && cd update-user && npm i"
+    },
+    "author": "",
+    "license": "ISC"
+}

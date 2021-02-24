@@ -1,0 +1,17 @@
+{
+  "name": "user-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "run-local-lambda --file index.js --event tests/event.json",
+    "predeploy": "zip -r Lambda-Deployment.zip * -x *.zip *.json *.log",
+    "deploy": "npm run predeploy && aws lambda update-function-code --function-name arn:aws:lambda:us-east-1:560776135079:function:serverless-architecure-on-AWS-v1-update-user --zip-file fileb://Lambda-Deployment.zip --profile serverless_architecture_on_AWS_v1 && rm -f Lambda-Deployment.zip"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
